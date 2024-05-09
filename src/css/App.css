@@ -17,38 +17,101 @@
 .register-form {
   display: flex;
   flex-direction: column;
-  margin: 20px;
 }
 
 @media screen and (min-width: 600px) {
   .auth-form-container {
-    padding: 5rem;
-    border: 1px solid rgb(18, 4, 4);
+    padding: 2rem;
+    border: 0.5px solid rgb(18, 4, 4);
     background-color: white;
     border-radius: 10px;
   }
 }
-.logo {
+.logo-container {
   margin-top: 1px;
 }
-
+.logo-container img {
+  width: 100px; /* Set the width */
+  height: auto; /* Maintain aspect ratio */
+}
 input {
-  margin: 1rem 0;
-  padding: 1rem;
-  border: black;
-  border-radius: 10px;
+  margin: 0.5rem;
+  margin-left: 10rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.input-container {
+  position: relative;
+}
+.input-container .icon-input-email {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23a0aec0" viewBox="0 0 20 20"><path d="M3 6a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V6zm10 0L10 9 7 6h6zm-8 7l5 3 5-3H5z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: left center;
+  border-radius: 5px;
+  padding: 8px 30px; /* Optional: Add padding for the input field */
+}
+
+.input-container .icon-input-password {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23a0aec0" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 8V6a6 6 0 1112 0v2h2a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2v-9a2 2 0 012-2h2zM8 8V6a4 4 0 118 0v2h2a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1v-9a1 1 0 011-1h2z" clip-rule="evenodd"/></svg>');
+  background-repeat: no-repeat;
+  background-size: 20px; /* Adjust the size of the icon */
+  background-position: left center;
+  border-radius: 5px; /* Optional: Add border radius for the input field */
+  padding: 8px 30px; /* Optional: Add padding for the input field */
+}
+
+.eye-icon {
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  right: 10px; /* Adjust as needed */
+  cursor: pointer;
+}
+
+.remember-forgot-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.remember-forgot-container label,
+.remember-forgot-container a {
+  color: #666; /* Adjust color */
+}
+
+.remember-forgot-container a:hover {
+  text-decoration: underline; /* Add underline on hover */
 }
 
 button {
-  border: none;
-  background-color: rgb(171, 27, 211);
-  padding: 20px;
+  background-color: rgb(179, 9, 9);
   border-radius: 10px;
   cursor: pointer;
-  color: #0a0303;
+  color: #ffffff;
+}
+
+.button-container {
+  margin-top: 2rem; /* Add margin bottom */
+  margin-bottom: 3rem; /* Add margin bottom */
+}
+
+.button-container button {
+  background-color: rgb(179, 9, 9);
+  border-radius: 10px;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 15px; /* Keep padding */
+  width: 200px; /* Set width */
+  transition: background-color 0.3s; /* Add transition for hover effect */
+}
+
+.button-container button:hover {
+  background-color: rgb(209, 19, 19); /* Change background color on hover */
 }
 
 .link-btn {
+  border: none;
   background: none;
   color: rgb(0, 0, 0);
   text-decoration: underline;

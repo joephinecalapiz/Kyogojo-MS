@@ -1,8 +1,11 @@
 /** @format */
+
 import React, { useState } from "react";
 
 import { Signin } from "./landing_screen/auth_screen/signin";
 import { Signup } from "./landing_screen/auth_screen/signup";
+import Dashboard from "./dashboard-admin/dashboard";
+
 import "./css/App.css";
 
 function App() {
