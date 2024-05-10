@@ -1,5 +1,6 @@
 /** @format */
 
+/* Your existing styles */
 .App {
   text-align: center;
   display: flex;
@@ -7,7 +8,7 @@
   align-items: center;
   justify-content: center;
   color: rgb(0, 0, 0);
-  background-image: linear-gradient(79deg, #6c1212, #440805 48%, #a22525);
+  background: linear-gradient(79deg, #6c1212, #440805 48%, #a22525);
 }
 
 /** @format */

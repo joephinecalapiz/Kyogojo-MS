@@ -1,5 +1,6 @@
 /** @format */
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import logo from "../../assets/kyogojo.png"; // Importing the logo image
 
@@ -54,10 +55,13 @@ export const Signup = (props) => {
           <button type="submit">Register</button>
         </div>
       </form>
+      <Link to="/" className="link-btn">
+        Don't have an account? Register here.
+      </Link>
 
-      <button className="link-btn" onClick={() => props.onFormSwitch("login")}>
+      {/* <button className="link-btn" onClick={() => props.onFormSwitch("login")}>
         Already have an account? Login here.
-      </button>
+      </button> */}
     </div>
   );
 };

@@ -1,18 +1,27 @@
 /** @format */
 
-import React from "react";
-import "../css/Dashboard.css";
+// Dashboard.js
+
+import React, { useEffect, useState } from "react";
+import Sidebar from "../component/Sidebar";
+import Topbar from "../component/Topbar";
+
+import "../css/Sidebar.css";
 
 const Dashboard = () => {
+  useEffect(() => {
+    document.title = "Dashboard";
+  }, []);
+
+  const [sidebarOpen, setSideBarOpen] = useState(false);
+  const handleViewSidebar = () => {
+    setSideBarOpen(!sidebarOpen);
+  };
   return (
-    <div className="dashboard">
-      <h1>Welcome to the Dashboard</h1>
-      <div className="widgets">
-        <div className="widget">Widget 1</div>
-        <div className="widget">Widget 2</div>
-        <div className="widget">Widget 3</div>
-      </div>
-    </div>
+    <span>
+      <Topbar />
+      <Sidebar isOpen={sidebarOpen} toggleSidebar={handleViewSidebar} />
+    </span>
   );
 };
 

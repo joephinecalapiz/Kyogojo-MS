@@ -1,7 +1,7 @@
 /** @format */
 
-import React, { useState } from "react";
-
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Signin } from "./landing_screen/auth_screen/signin";
 import { Signup } from "./landing_screen/auth_screen/signup";
 import Dashboard from "./dashboard-admin/dashboard";
@@ -9,20 +9,16 @@ import Dashboard from "./dashboard-admin/dashboard";
 import "./css/App.css";
 
 function App() {
-  const [currentForm, setCurrentForm] = useState("login");
-
-  const toggleForm = (formName) => {
-    setCurrentForm(formName);
-  };
-
   return (
-    <div className="App">
-      {currentForm === "login" ? (
-        <Signin onFormSwitch={toggleForm} />
-      ) : (
-        <Signup onFormSwitch={toggleForm} />
-      )}
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

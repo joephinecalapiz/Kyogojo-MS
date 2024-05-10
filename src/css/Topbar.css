@@ -1,0 +1,31 @@
+/** @format */
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+.actions {
+  display: flex;
+}
+
+.action {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.action:hover {
+  opacity: 0.8;
+}
